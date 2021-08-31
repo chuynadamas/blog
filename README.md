@@ -1,0 +1,2 @@
+# mediocrates
+Publish-Blog

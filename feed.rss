@@ -1,4 +1,70 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>ChuyNadaMas's Personal Blog</title><description>This is the lazaro project, the blog who return from dead</description><link>https://chuynadamas.github.io/chuynadamas/</link><language>en</language><lastBuildDate>Mon, 6 Sep 2021 21:21:15 -0500</lastBuildDate><pubDate>Mon, 6 Sep 2021 21:21:15 -0500</pubDate><ttl>250</ttl><atom:link href="https://chuynadamas.github.io/chuynadamas/feed.rss" rel="self" type="application/rss+xml"/><item><guid isPermaLink="true">https://chuynadamas.github.io/chuynadamas/posts/subscript-dictionary</guid><title>Subscript a Dictonary in swift</title><description>Subsctipt a dictionary? - No problem 🧨</description><link>https://chuynadamas.github.io/chuynadamas/posts/subscript-dictionary</link><pubDate>Mon, 6 Sep 2021 21:39:00 -0500</pubDate><content:encoded><![CDATA[<h1>Subscript a Dictonary in swift</h1><h2>The power of subscription in swift</h2><p>The dictionary are a super helpful tool given by foundation in swift, but we can make it even powerful with the powe of subscript, let see the example with the current user here in the site.</p><br/><p>I'll crete a new dictionary with to handle the color of my labels, something like this:</p><pre><code><span class="keyword">private struct</span> Utils {
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>ChuyNadaMas's Personal Blog</title><description>This is the lazaro project, the blog who return from dead</description><link>https://chuynadamas.github.io/chuynadamas/</link><language>en</language><lastBuildDate>Thu, 9 Sep 2021 20:19:31 -0500</lastBuildDate><pubDate>Thu, 9 Sep 2021 20:19:31 -0500</pubDate><ttl>250</ttl><atom:link href="https://chuynadamas.github.io/chuynadamas/feed.rss" rel="self" type="application/rss+xml"/><item><guid isPermaLink="true">https://chuynadamas.github.io/chuynadamas/posts/oh-my-zh-git</guid><title>Oh my zsh git plugin cheatsheet</title><description>A Cheatsheet for some git commands in ohmyzsh 👾</description><link>https://chuynadamas.github.io/chuynadamas/posts/oh-my-zh-git</link><pubDate>Tue, 7 Sep 2021 21:31:00 -0500</pubDate><content:encoded><![CDATA[<h1>Oh my zsh git plugin cheatsheet</h1><h2>Some useful commands in the <a href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git">git plugin</a></h2><table class="lzz-table">
+  <tr class="lzz-tr">
+    <th class="lzz-th">Alias</th>
+    <th class="lzz-th">Command</th>
+    <th class="lzz-th">Notes</th>
+  </tr>
+  <tr class="lzz-tr">
+    <td class="lzz-td">gb</td>
+    <td class="lzz-td"><code><span class="keyword">git</span> <span class="dotAccess">branch</span></code></td>
+    <td class="lzz-td">List all local branches</td>
+  </tr>
+  <tr class="lzz-tr">
+    <td class="lzz-td">gba</td>
+    <td class="lzz-td"><code><span class="keyword">git</span> <span class="dotAccess">branch -a</span></code></td>
+    <td class="lzz-td">List all local and remote branches</td>
+  </tr>
+  <tr class="lzz-tr">
+    <td class="lzz-td">gcam</td>
+    <td class="lzz-td"><code><span class="keyword">git</span> <span class="dotAccess">commit -am</span></code></td>
+    <td class="lzz-td">Add all files to stage and commit</td>
+  </tr>
+  <tr class="lzz-tr">
+    <td class="lzz-td">gcmsg</td>
+    <td class="lzz-td"><code><span class="keyword">git</span> <span class="dotAccess">commit -m</span></code></td>
+    <td class="lzz-td">Git commit message</td>
+  </tr>
+  <tr class="lzz-tr">
+    <td class="lzz-td">gco</td>
+    <td class="lzz-td"><code><span class="keyword">git</span> <span class="dotAccess">checkout</span></code></td>
+    <td class="lzz-td">Checkout spceified changes</td>
+  </tr>
+  <tr class="lzz-tr">
+    <td class="lzz-td">gco -</td>
+    <td class="lzz-td"><code><span class="keyword">git</span> <span class="dotAccess">checkout</span></code></td>
+    <td class="lzz-td">Change branch to the previous one</td>
+  </tr>
+  <tr class="lzz-tr">
+    <td class="lzz-td">gd</td>
+    <td class="lzz-td"><code><span class="keyword">git</span> <span class="dotAccess">diff</span></code></td>
+    <td class="lzz-td">Show differences in staging files/td>
+  </tr>
+  <tr class="lzz-tr">
+    <td class="lzz-td">gfa</td>
+    <td class="lzz-td"><code><span class="keyword">git</span> <span class="dotAccess">fetch --all --prune</span></code></td>
+    <td class="lzz-td">Fetch all remote branches, delete branch if upstream is gone</td>
+  </tr>
+  <tr class="lzz-tr">
+    <td class="lzz-td">gl</td>
+    <td class="lzz-td"><code><span class="keyword">git</span> <span class="dotAccess">pull</span></code></td>
+    <td class="lzz-td">Pull from remote</td>
+  </tr>
+  <tr class="lzz-tr">
+    <td class="lzz-td">gp</td>
+    <td class="lzz-td"><code><span class="keyword">git</span> <span class="dotAccess">pull</span></code></td>
+    <td class="lzz-td">Push to remote</td>
+  </tr>
+  <tr class="lzz-tr">
+    <td class="lzz-td">gpsup</td>
+    <td class="lzz-td"><code><span class="keyword">git</span> <span class="dotAccess">push --set-upstream origin[currentbranch]</span></code></td>
+    <td class="lzz-td">Set upstream branch</td>
+  </tr>
+  <tr class="lzz-tr">
+    <td class="lzz-td">gst</td>
+    <td class="lzz-td"><code><span class="keyword">git</span> <span class="dotAccess">status</span></code></td>
+    <td class="lzz-td">Local files to commit</td>
+  </tr>
+</table>]]></content:encoded></item><item><guid isPermaLink="true">https://chuynadamas.github.io/chuynadamas/posts/subscript-dictionary</guid><title>Subscript a Dictonary in Swift</title><description>How to subscript a dictionary in Swift  ☄️</description><link>https://chuynadamas.github.io/chuynadamas/posts/subscript-dictionary</link><pubDate>Mon, 6 Sep 2021 21:39:00 -0500</pubDate><content:encoded><![CDATA[<h1>Subscript a Dictonary in Swift</h1><h2>The power of subscription in swift</h2><p>The dictionary are a super helpful tool given by foundation in swift, but we can make it even powerful with the powe of subscript, let see the example with the current user here in the site.</p><br/><p>I'll crete a new dictionary with to handle the color of my labels, something like this:</p><pre><code><span class="keyword">private struct</span> Utils {
     <span class="keyword">static let</span> tagVariants = [
         <span class="string">"Article"</span> : <span class="string">"variant-a"</span>,
         <span class="string">"Assembly"</span> : <span class="string">"variant-b"
@@ -18,7 +84,7 @@
     }
 }
 </code></pre><br/><p>With that every time we use our new function <code>[safeKey]</code> we are ensure that the result will be a value, and if the tag doesn't have any style we need to be sure that we have an associated type in our current dictionary.</p><br/><p>As an example now we can use the following way to acces our variants!</p><pre><code><span class="type">Utils</span>.<span class="property">tagVariants</span>[safeKey: tag.<span class="property">string</span>]
-</code></pre><br/><p>Just directly without using any <code>guard</code> of <code>if let</code> logic. This is faster, but also cames with a great responsability because you have to be sure <br>that all the values that you'll use have to be in your ditionary in other case you won't have a crash... Yes, sometimes crash are good, they can help us to find some holes in our code.</p><br/><p>With great power comes great responsibility -- Uncle Ben 🕸</p>]]></content:encoded></item><item><guid isPermaLink="true">https://chuynadamas.github.io/chuynadamas/posts/hello-sillicon</guid><title>Hello Sillicon</title><description>How to do a hello world in assambler for M1 Mac</description><link>https://chuynadamas.github.io/chuynadamas/posts/hello-sillicon</link><pubDate>Sat, 28 Aug 2021 21:39:00 -0500</pubDate><content:encoded><![CDATA[<h1>Hello Sillicon</h1><h2>How the computer works</h2><p>In this is post I'll talk about how to compiler assambler code to create a <code></code><code>Hello World</code><code></code> in M1, this code is following the course of the <a href="https://www.amazon.com/Programming-64-Bit-ARM-Assembly-Language/dp/1484258800/ref=sr_1_1?crid=34ED002YD0Y9Z&dchild=1&keywords=programming+with+64-bit+arm+assembly+language&qid=1610126434">Programming with 64-Bit ARM Assembly Language</a></p><p>Below is the code that you can find the book</p><br/><pre><code><span class="comment">//
+</code></pre><br/><p>Just directly without using any <code>guard</code> of <code>if let</code> logic. This is faster, but also cames with a great responsability because you have to be sure <br>that all the values that you'll use have to be in your ditionary in other case you won't have a crash... Yes, sometimes crash are good, they can help us to find some holes in our code.</p><br/><p>With great power comes great responsibility -- Uncle Ben 🕸</p>]]></content:encoded></item><item><guid isPermaLink="true">https://chuynadamas.github.io/chuynadamas/posts/hello-sillicon</guid><title>Hello Sillicon</title><description>How to do a hello world in assambler for M1 Mac 💻</description><link>https://chuynadamas.github.io/chuynadamas/posts/hello-sillicon</link><pubDate>Sat, 28 Aug 2021 21:39:00 -0500</pubDate><content:encoded><![CDATA[<h1>Hello Sillicon</h1><h2>How the computer works</h2><p>In this is post I'll talk about how to compiler assambler code to create a <code></code><code>Hello World</code><code></code> in M1, this code is following the course of the <a href="https://www.amazon.com/Programming-64-Bit-ARM-Assembly-Language/dp/1484258800/ref=sr_1_1?crid=34ED002YD0Y9Z&dchild=1&keywords=programming+with+64-bit+arm+assembly+language&qid=1610126434">Programming with 64-Bit ARM Assembly Language</a></p><p>Below is the code that you can find the book</p><br/><pre><code><span class="comment">//
 // Assembler program to print "Hello World!"
 // to stdout.
 //
